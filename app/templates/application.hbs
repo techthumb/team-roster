@@ -6,23 +6,25 @@
       </span>
       <div class='mdl-layout-spacer'></div>
       <nav class='mdl-navigation mdl-layout--large-screen-only'>
-        {{link-to 'Users' class='mdl-navigation__link'}}
+        {{link-to 'Users' 'users' class='mdl-navigation__link'}}
         {{link-to 'Tasks' class='mdl-navigation__link'}}
       </nav>
     </div>
   </header>
-  <div class="mdl-layout__drawer">
+  <div class='mdl-layout__drawer'>
     <span class='mdl-layout-title'>
       Team Roster
     </span>
-    <nav class="mdl-navigation">
-      {{link-to 'Users' class='mdl-navigation__link'}}
+    <nav class='mdl-navigation'>
+      {{link-to 'Users' 'users' class='mdl-navigation__link'}}
       {{link-to 'Tasks' class='mdl-navigation__link'}}
     </nav>
   </div>
   <main class='mdl-layout__content'>
-    <div class='page-content'>
-      {{outlet}}
+    <div class='page-content mdl-grid'>
+      <div class='mdl-cell mdl-cell--2-col'></div>
+      <div class='mdl-cell mdl-cell--8-col'>{{outlet}}</div>
+      <div class='mdl-cell mdl-cell--2-col'></div>
     </div>
   </main>
 </div>
